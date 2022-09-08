@@ -66,7 +66,7 @@ void Output_light(String Sample_morse)// the function for execution of blinking 
 
 
     // if else blocks for checking the character.
-    if (required == '.').
+    if (required == '.')
     {
       digitalWrite(LED_BUILTIN, HIGH);// blinking the LED with suitable time delay.
       delay(dot_time_delay);

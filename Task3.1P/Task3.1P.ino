@@ -60,9 +60,9 @@ void setup() {
 
 void loop() {
   ArduinoCloud.update();
-  temp = dht.readTemperature();
+  temp = dht.readTemperature();// reading the temperature via the sensor.
 
-  delay(1000);
+  delay(1000);// a suitable delay in each reading.
 
 
 
@@ -76,5 +76,5 @@ void loop() {
 */
 void onLEDChange()  {
   // Add your code here to act upon LED change
-  digitalWrite(LED_BUILTIN, lED);
+  digitalWrite(LED_BUILTIN, lED);// turining LED on or off based on the changes in the value of lED variable.
 }

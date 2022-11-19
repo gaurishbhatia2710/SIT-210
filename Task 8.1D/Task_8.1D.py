@@ -5,7 +5,7 @@
 
 #importing the required libraries to control the ambient light sensor.
 import smbus 
-import time as sleep
+import time
 
 #setting up the variables for the address and mode for the I2C device.
 I2C_DEVICE = 0x23 
@@ -29,13 +29,17 @@ while True:
 
     if (light_value < 35):
         print("Too Dark Environment")
+        time.sleep(1)
     elif (light_value < 95 and light_value >= 35):
         print("Dark Environment")
+        time.sleep(1)
     elif (light_value < 150 and light_value >= 95):
         print("Medium")
+        time.sleep(1)
     elif (light_value < 500 and light_value >= 150):
         print("Bright")
+        time.sleep(1)
     else:
         print("Too Bright")
+        time.sleep(1)
 
-    sleep(1.0)

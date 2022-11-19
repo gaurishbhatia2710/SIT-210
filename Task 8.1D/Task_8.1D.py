@@ -22,10 +22,10 @@ def retrieve_Light_value(addr=I2C_DEVICE):
     sample_result = ((value_of_light[1] + (256 * value_of_light[0])) / 1.2)
     return sample_result
 
-#looping infinitely with a delay of 1 second in checking and displaying the value of light intensity.
+#looping infinitely with a delay of 1 second in checking and displaying the brightness.
 while True:
     light_value = retrieve_Light_value()
-    print("The value for light intensity : " + str(light_value) + " lux")
+ 
 
     if (light_value < 35):
         print("Too Dark Environment")
